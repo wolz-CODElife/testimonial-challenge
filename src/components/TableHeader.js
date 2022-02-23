@@ -10,10 +10,11 @@ const TableHeader = (props) => {
     const [tracks, setTracks] = useState(null)
     const listOfTracks = tracks || trackList
 
-    const url = "api/v2/tracks"
+    const url = `https://corsanytime.herokuapp.com/tracks`
 
     useEffect(() => {
          fetchTracks()
+         //eslint-disable-next-line
     }, [])
 
     const fetchTracks = async () => {
@@ -47,14 +48,15 @@ const TableHeader = (props) => {
                 </button>
                 {openTrack &&
                     <div className='absolute top-[120%] z-30 w-[376px] max-h-[364px] overflow-y-auto p-2 rounded-lg bg-white shadow-[0px_4px_42px_rgba(79,114,205,0.15)]'>
-                        {listOfTracks.map(item => (    
+                        {listOfTracks.map(item => 
+                            trackCounts[item.slug] || item.title === "All" ? (    
                             <div key={item.title} onClick={() => {setActiveTrack(item); setPage(1)}} className={`flex items-center justify-around rounded-sm h-14 cursor-pointer ${activeTrack.title === item.title? "bg-form-grey": ""}`}>
                                 <input type="radio" checked={activeTrack.title === item.title? true: false} disabled className="mx-6" />
                                 <img src={item.icon_url} alt={item.title} className="w-9 h-11 object-contain mr-5" />
                                 <p className='flex-1'>{item.title}</p>
                                 <span className='rounded-full border-[1px] border-border-grey px-2 mx-6'>{trackCounts ? trackCounts[item.slug] : 0}</span>
                             </div>
-                        ))}
+                        ) : "")}
                     </div>                    
                 }
             </div>

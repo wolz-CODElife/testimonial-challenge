@@ -14,7 +14,7 @@ const Testimonials = () => {
     const [trackCounts, setTrackCounts] = useState()
     const [page, setPage] = useState(1)
 
-    const url = `api/v2/hiring/testimonials?page=${page}${activeTrack.title.toLowerCase() !== "all" ? "&track="+activeTrack.slug.toLowerCase() : ""}${searchQuery ? "&exercise="+searchQuery : ""}${activeSort === "Newest First" ? "&order=newest_first" : "&order=oldest_first"}`
+    const url = `https://corsanytime.herokuapp.com/hiring/testimonials?page=${page}${activeTrack.title.toLowerCase() !== "all" ? "&track="+activeTrack.slug.toLowerCase() : ""}${searchQuery ? "&exercise="+searchQuery : ""}${activeSort === "Newest First" ? "&order=newest_first" : "&order=oldest_first"}`
 
     useEffect(() => {
         setLoading(true)

@@ -12,13 +12,13 @@ const Navbar = () => {
             ))}
         </div>
         <div className='md:flex flex-1 min-w-max items-center justify-end'>
-            <a href="/" className='mx-5'>
+            <a href="/" className='mx-5 hover:scale-110'>
                 <img src="https://i.postimg.cc/wvbMvhFt/image.png" className='h-6' alt="Social Media Reward" />
             </a>
-            <a href="/" className='mx-5'>
+            <a href="/" className='mx-5 hover:scale-110'>
                 <img src="https://i.postimg.cc/DyQWQbwN/image.png" className='h-6' alt="Social Media Reward" />
             </a>
-            <a href="/" className='mx-5 bg-btn-cream shadow-[0px_4px_24px_rgba(156,130,38,0.4)] p-3 rounded-lg relative'>
+            <a href="/" className='mx-5 hover:scale-110 bg-btn-cream shadow-[0px_4px_24px_rgba(156,130,38,0.4)] p-3 rounded-lg relative'>
                 <span className='h-6 w-6 flex items-center justify-center text-white bg-wine absolute rounded-full right-[-10px] top-[-5px]'>2</span>
                 <img src="https://i.postimg.cc/xC9pCmqS/image.png" className='h-5' alt="Social Media Reward" />
             </a>
