@@ -11,7 +11,7 @@ Welcome! 🙂
 
 ## Demo
 
-Here is a link to the demo of this challenge: (https://exercism-testimonial.web.app)[https://exercism-testimonial.web.app]
+Here is a link to the demo of this challenge: [https://exercism-testimonial.web.app](https://exercism-testimonial.web.app)
 
 ## Overview
 
